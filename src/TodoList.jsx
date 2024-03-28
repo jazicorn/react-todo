@@ -1,9 +1,5 @@
-import './App.css'
-
-/**
- * 
- * 
- */
+import './App.css';
+import Item from './TodoListItem';
 
 function TodoList() {
   const list = [{"id":1, "title": "Food's"}, {"id":2, "title": "Movie's"}, {"id":3, "title": "Anime's"}, {}];
@@ -11,11 +7,9 @@ function TodoList() {
   return (
     <>
       <ul>
-      {list.map(function(item) {
+      {list.map((item) => {
         return (
-          <li key={item.id}>
-            {item.title}
-          </li>
+          <Item key={item.id} item={item}/>
         )
       })}
       </ul>
